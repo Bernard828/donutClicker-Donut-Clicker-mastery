@@ -14,7 +14,9 @@ let intervalId = null;
         setupAddClickerButton();
         setupDonutMultiplierButton();
 }
-    const update
+const updateAutoClicker = function () {
+    addDonuts.innerText = donut.getCount();
+    }
 // const speedometerElement = document.querySelector('.dashboard__speedometer');
 // const updateSpeedometer = function () {
     //     speedometerElement.innerText = car.getSpeed();
