@@ -14,15 +14,14 @@ class Donut {
     getDonutAmtTotal() {
         return this.total;
     }
-    
+
+    isAdding() {
+        return this.count > 0;
+    }
  }
 
 //     isSpeeding() {
 //         return this.speed > 70;
-//     }
-
-//     isDriving() {
-//         return this.speed > 0;
 //     }
 
 //     accelerate() {

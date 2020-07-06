@@ -28,7 +28,13 @@ const countActive = function () {
         donut.addClick();
         totalDonutAmount();
         isTotalAmountActive = true;
-    },1)
+    }, 1);
+}
+const addDonutsOnClick = function () {
+    if (donut.isAdding() && !countActive) {
+        
+        
+    }
 }
 // const addMilesIfDriving = function () {
 //     if (car.isDriving() && !isOdometerActive) {
