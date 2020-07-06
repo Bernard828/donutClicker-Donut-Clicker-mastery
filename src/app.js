@@ -18,6 +18,7 @@ const donutClicker = function () {
 //     speedometerElement.innerText = car.getSpeed();
 // }
 const updateClick() = function () {
+ 
     
 }
 
@@ -25,6 +26,7 @@ const updateClick() = function () {
 //     odometerElement.innerText = car.getDistanceTravelled();
 // }
 
+const 
 // const addMilesIfDriving = function () {
 //     if (car.isDriving() && !isOdometerActive) {
 //         odometerActive();
