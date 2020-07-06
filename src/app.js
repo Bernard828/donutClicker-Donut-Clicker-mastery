@@ -1,3 +1,9 @@
+const addDonuts = document.querySelector('donutsAdded');
+const totalDonuts = document.querySelector('totalDonuts');
+const bakerAlert = document.querySelector('warning');
+const clickerButton = document.querySelector('addClicker');
+const multButton = document.querySelector('donutMultiplier');
+
 // const car = new Car();
 const donut = new Donut();
 
@@ -11,18 +17,15 @@ let intervalId = null;
     //     setupBrakeButton();
     // }
     const donutClicker = function () {
+        setupAddClickerButton();
         setupDonutMultiplierButton();
-        setupResetButton();
     }
 // const speedometerElement = document.querySelector('.dashboard__speedometer');
 // const updateSpeedometer = function () {
     //     speedometerElement.innerText = car.getSpeed();
     // }
-    const updateView() = function () {
+const 
         
-        
-    }
-    
 // const odometerElement = document.querySelector('.dashboard__odometer');
 // const updateOdometer = function () {
 //     odometerElement.innerText = car.getDistanceTravelled();
