@@ -16,17 +16,11 @@ let intervalId = null;
 }
 const updateAutoClicker = function () {
     addDonuts.innerText = donut.getCount();
-    }
-// const speedometerElement = document.querySelector('.dashboard__speedometer');
-// const updateSpeedometer = function () {
-    //     speedometerElement.innerText = car.getSpeed();
-    // }
-const 
-        
-// const odometerElement = document.querySelector('.dashboard__odometer');
-// const updateOdometer = function () {
-//     odometerElement.innerText = car.getDistanceTravelled();
-// }
+}
+    
+const totalDonutAmount = function () {
+    totalDonuts.innerText = donut.getDonutAmtTotal();
+}
 
 // const addMilesIfDriving = function () {
 //     if (car.isDriving() && !isOdometerActive) {
