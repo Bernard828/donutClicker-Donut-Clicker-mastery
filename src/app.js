@@ -4,22 +4,17 @@ const bakerAlert = document.querySelector('warning');
 const clickerButton = document.querySelector('addClicker');
 const multButton = document.querySelector('donutMultiplier');
 
-// const car = new Car();
+
 const donut = new Donut();
 
-// let isOdometerActive = false;
-// let intervalId = null;
 let isCountActive = false;
 let intervalId = null;
 
-// const carSetup = function () {
-    //     setupAcceleratorButton();
-    //     setupBrakeButton();
-    // }
     const donutClicker = function () {
         setupAddClickerButton();
         setupDonutMultiplierButton();
-    }
+}
+    const update
 // const speedometerElement = document.querySelector('.dashboard__speedometer');
 // const updateSpeedometer = function () {
     //     speedometerElement.innerText = car.getSpeed();
