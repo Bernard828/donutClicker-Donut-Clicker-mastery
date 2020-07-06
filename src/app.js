@@ -22,6 +22,14 @@ const totalDonutAmount = function () {
     totalDonuts.innerText = donut.getDonutAmtTotal();
 }
 
+const countActive = function () {
+    console.log('set inteval is valid')
+    intervalId = setInterval(function () {
+        donut.addClick();
+        totalDonutAmount();
+        isTotalAmountActive = true;
+    },1)
+}
 // const addMilesIfDriving = function () {
 //     if (car.isDriving() && !isOdometerActive) {
 //         odometerActive();
@@ -31,15 +39,6 @@ const totalDonutAmount = function () {
 //         clearInterval(intervalId);
 //         isOdometerActive = false;
 //     }
-// }
-
-// const odometerActive = function () {
-//     console.log('set interval is active')
-//     intervalId = setInterval(function () {
-//         car.addMile();
-//         updateOdometer();
-//         isOdometerActive = true;
-//     }, 1000);
 // }
 
 // const acceleratorElement = document.querySelector('.floorboard__accelerator');
