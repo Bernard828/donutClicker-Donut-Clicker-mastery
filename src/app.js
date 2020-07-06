@@ -10,78 +10,56 @@ const donut = new Donut();
 let isCountActive = false;
 let intervalId = null;
 
-    const donutClicker = function () {
-        setupAddClickerButton();
-        setupDonutMultiplierButton();
+const donutClicker = function () {
+    setupClickerButton();
+    setupMultiplierButton();
 }
 const updateAutoClicker = function () {
     addDonuts.innerText = donut.getCount();
 }
-    
-const totalDonutAmount = function () {
-    totalDonuts.innerText = donut.getDonutAmtTotal();
+
+const updateTotalAmount = function () {
+    totalDonuts.innerText = donut.getTotalAmount();
 }
 
-const countActive = function () {
-    console.log('set inteval is valid')
+const totalViewActive = function () {
+    console.log('set inteval is active')
     intervalId = setInterval(function () {
-        donut.addClick();
-        totalDonutAmount();
-        isTotalAmountActive = true;
+        donut.addDonut();
+        updateTotalAmount();
+        isCountActive = true;
     }, 1);
 }
-const addDonutsOnClick = function () {
+
+const donutsPerClick = function () {
     if (donut.isAdding() && !countActive) {
-        
-        
+        totalViewActive();
+    }
+    else if (!donut.isAdding() && isCountActive) {
+        console.log("clearing id=${intervalId")
+        clearInterval(intervalId);
+        isCountActive = false;
     }
 }
-// const addMilesIfDriving = function () {
-//     if (car.isDriving() && !isOdometerActive) {
-//         odometerActive();
-//     }
-//     else if (!car.isDriving() && isOdometerActive) {
-//         console.log(`clearing id=${intervalId}`)
-//         clearInterval(intervalId);
-//         isOdometerActive = false;
-//     }
-// }
 
-// const acceleratorElement = document.querySelector('.floorboard__accelerator');
-// const setupAcceleratorButton = function () {
-//     acceleratorElement.addEventListener('click', function () {
-//         car.accelerate();
-//         console.log(car.getSpeed());
-//         updateSpeedometer();
-//         warnIfSpeeding();
-//         addMilesIfDriving();
-//     })
-// }
+const startCount = function () {
+    clickerButton.addEventListener('click', function () {
+        donut.addDonut();
+        console.log(donut.getCount());
+        updateAutoClicker();
+        totalViewActive();
+    })
+}
 
-// const brakeElement = document.querySelector('.floorboard__brake');
-// const setupBrakeButton = function () {
-//     brakeElement.addEventListener('click', function () {
-//         car.brake();
-//         updateSpeedometer();
-//         warnIfSpeeding();
-//         addMilesIfDriving();
-//     })
-// }
+const bakerAlert = function () {
+    if (donut.changeMultiplier()) {
+        bakerAlert.classList.remove('hidden');
+    }
+    else {
+        bakerAlert.classList.add("hidden");
+    }
+}
+donutClicker();
 
-
-// const warningElement = document.querySelector('.dashboard__warning');
-// const warnIfSpeeding = function () {
-//     if (car.isSpeeding()) {
-//         warningElement.classList.remove('hidden');
-//     }
-//     else {
-//         warningElement.classList.add('hidden');
-//     }
-// }
-
-
-// carSetup();
-
-
-// updateSpeedometer();
-// updateOdometer();
+updateAutoClicker();
+updateTotalAmount();

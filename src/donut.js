@@ -1,42 +1,41 @@
 
 class Donut {
-
     constructor() {
         this.count = 0;
         this.total = 0;
          
     }
 
-    getCount() {
+    getCount() {        //getSpeed
         return this.count;
     }
 
-    getDonutAmtTotal() {
+    getTotalAmount() {          //getDistTravld
         return this.total;
     }
 
-    isAdding() {
+    isAdding() {        //isDriving
         return this.count > 0;
     }
- }
 
-//     isSpeeding() {
-//         return this.speed > 70;
-//     }
+    addDonut() {            //addMile
+        this.total += 1;
+        // if (this.count < 20) {
+        //     this.total += 20;
+        // }
+    }
+    addMultiplier() {       //accelerate
+        this.count += 10;
+    }
+    
+    isMultiplying() {
+        return this.count > 50;
+    }
 
-//     accelerate() {
-//         this.speed += 10;
-//     }
-
-//     brake() {
-//         this.speed -= 7;
-//         if (this.speed < 0) {
-//             this.speed = 0;
-//         }
-//     }
-
-//     addMile() {
-//         this.distanceTravelled += 1;
-//     }
-
-// }
+    changeMultiplier() {
+        this.count += 100;
+        if (this.count > 150) {
+            this.count = 0;
+        }
+    }
+}
