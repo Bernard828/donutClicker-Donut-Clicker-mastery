@@ -1,21 +1,21 @@
-// class Car {
-//     constructor() {
-//         this.speed = 0;
-//         this.distanceTravelled = 0;
-//     }
+
 class Donut {
+
     constructor() {
+        this.count = 0;
+        this.total = 0;
          
-     }
+    }
+
+    getCount() {
+        return this.count;
+    }
+
+    getDonutAmtTotal() {
+        return this.total;
+    }
+    
  }
-
-//     getSpeed() {
-//         return this.speed;
-//     }
-
-//     getDistanceTravelled() {
-//         return this.distanceTravelled;
-//     }
 
 //     isSpeeding() {
 //         return this.speed > 70;
