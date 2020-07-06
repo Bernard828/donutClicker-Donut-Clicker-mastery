@@ -7,26 +7,27 @@ let isCountActive = false;
 let intervalId = null;
 
 // const carSetup = function () {
-//     setupAcceleratorButton();
-//     setupBrakeButton();
-// }
-const donutClicker = function () {
-    setupDonutMultiplierButton();
-    setupResetButton();
-}
+    //     setupAcceleratorButton();
+    //     setupBrakeButton();
+    // }
+    const donutClicker = function () {
+        setupDonutMultiplierButton();
+        setupResetButton();
+    }
+// const speedometerElement = document.querySelector('.dashboard__speedometer');
 // const updateSpeedometer = function () {
-//     speedometerElement.innerText = car.getSpeed();
-// }
-const updateClick() = function () {
- 
+    //     speedometerElement.innerText = car.getSpeed();
+    // }
+    const updateView() = function () {
+        
+        
+    }
     
-}
-
+// const odometerElement = document.querySelector('.dashboard__odometer');
 // const updateOdometer = function () {
 //     odometerElement.innerText = car.getDistanceTravelled();
 // }
 
-const 
 // const addMilesIfDriving = function () {
 //     if (car.isDriving() && !isOdometerActive) {
 //         odometerActive();
@@ -47,6 +48,7 @@ const
 //     }, 1000);
 // }
 
+// const acceleratorElement = document.querySelector('.floorboard__accelerator');
 // const setupAcceleratorButton = function () {
 //     acceleratorElement.addEventListener('click', function () {
 //         car.accelerate();
@@ -57,6 +59,7 @@ const
 //     })
 // }
 
+// const brakeElement = document.querySelector('.floorboard__brake');
 // const setupBrakeButton = function () {
 //     brakeElement.addEventListener('click', function () {
 //         car.brake();
@@ -66,6 +69,8 @@ const
 //     })
 // }
 
+
+// const warningElement = document.querySelector('.dashboard__warning');
 // const warnIfSpeeding = function () {
 //     if (car.isSpeeding()) {
 //         warningElement.classList.remove('hidden');
