@@ -1,65 +1,45 @@
-const addDonuts = document.querySelector('donutsAdded');
-const totalDonuts = document.querySelector('totalDonuts');
-const bakerAlert = document.querySelector('warning');
-const clickerButton = document.querySelector('addClicker');
-const multButton = document.querySelector('donutMultiplier');
-
-
+const addOneElement = document.querySelector('.addButton')
 const donut = new Donut();
 
-let isCountActive = false;
+let isClickActive = false;
 let intervalId = null;
-
-const donutClicker = function () {
-    setupClickerButton();
-    setupMultiplierButton();
-}
-const updateAutoClicker = function () {
-    addDonuts.innerText = donut.getCount();
+const donutMaker = function () {
+    //addDonutbutton
+    //changeMultbutton
 }
 
-const updateTotalAmount = function () {
-    totalDonuts.innerText = donut.getTotalAmount();
+const updateClicks = function () {
+    
 }
-
-const totalViewActive = function () {
-    console.log('set inteval is active')
-    intervalId = setInterval(function () {
-        donut.addDonut();
-        updateTotalAmount();
-        isCountActive = true;
-    }, 1);
-}
-
-const donutsPerClick = function () {
-    if (donut.isAdding() && !countActive) {
-        totalViewActive();
+const addDonutOnClick = function () {
+    if (donut.isAdding() && !isClickActive) {
+        totalActive();
     }
-    else if (!donut.isAdding() && isCountActive) {
-        console.log("clearing id=${intervalId")
+    else if (!donut.isAdding() && isClickActive) {
+        console.log(`clearing id=${intervalId}`)
         clearInterval(intervalId);
-        isCountActive = false;
+        isClickActive = false;
     }
 }
-
-const startCount = function () {
-    clickerButton.addEventListener('click', function () {
-        donut.addDonut();
-        console.log(donut.getCount());
-        updateAutoClicker();
-        totalViewActive();
+const clickerActive = function () {
+    console.log('set interval is active')
+    intervalId = setInterval(function () {
+        donut.addOne();
+        ;
+        isClickActive = true;
+    }, 1000)
+}
+const setupAddDonutsButton = function () {
+    addOneElement.addEventListener('click', function () {
+        donut.
     })
 }
-
-const bakerAlert = function () {
-    if (donut.changeMultiplier()) {
-        bakerAlert.classList.remove('hidden');
-    }
-    else {
-        bakerAlert.classList.add("hidden");
-    }
+const setupAcceleratorButton = function () {
+    acceleratorElement.addEventListener('click', function () {
+        car.accelerate();
+        console.log(car.getSpeed());
+        updateSpeedometer();
+        warnIfSpeeding();
+        addMilesIfDriving();
+    })
 }
-donutClicker();
-
-updateAutoClicker();
-updateTotalAmount();
