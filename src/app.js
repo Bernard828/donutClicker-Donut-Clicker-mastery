@@ -1,65 +1,27 @@
-const addDonuts = document.querySelector('donutsAdded');
-const totalDonuts = document.querySelector('totalDonuts');
-const bakerAlert = document.querySelector('warning');
-const clickerButton = document.querySelector('addClicker');
-const multButton = document.querySelector('donutMultiplier');
-
+const addOneElement = document.querySelector('.addButton')
 
 const donut = new Donut();
 
-let isCountActive = false;
+let isClickActive = false;
 let intervalId = null;
 
-const donutClicker = function () {
-    setupClickerButton();
-    setupMultiplierButton();
-}
-const updateAutoClicker = function () {
-    addDonuts.innerText = donut.getCount();
+const donutMaker = function () {
+    setupAddDonutsButton();
+    //changeMultbutton
 }
 
-const updateTotalAmount = function () {
-    totalDonuts.innerText = donut.getTotalAmount();
+const updateClicks = function () {
+addOneElement
+
 }
 
-const totalViewActive = function () {
-    console.log('set inteval is active')
-    intervalId = setInterval(function () {
-        donut.addDonut();
-        updateTotalAmount();
-        isCountActive = true;
-    }, 1);
-}
 
-const donutsPerClick = function () {
-    if (donut.isAdding() && !countActive) {
-        totalViewActive();
-    }
-    else if (!donut.isAdding() && isCountActive) {
-        console.log("clearing id=${intervalId")
-        clearInterval(intervalId);
-        isCountActive = false;
-    }
-}
-
-const startCount = function () {
-    clickerButton.addEventListener('click', function () {
-        donut.addDonut();
-        console.log(donut.getCount());
-        updateAutoClicker();
-        totalViewActive();
+const setupAddDonutsButton = function () {
+    addOneElement.addEventListener('click', function () {
+        donut.addOne();
+        console.log(donut.getTotalDonuts());
+        //updateClicks();
+        addDonutOnClick();
     })
 }
 
-const bakerAlert = function () {
-    if (donut.changeMultiplier()) {
-        bakerAlert.classList.remove('hidden');
-    }
-    else {
-        bakerAlert.classList.add("hidden");
-    }
-}
-donutClicker();
-
-updateAutoClicker();
-updateTotalAmount();
