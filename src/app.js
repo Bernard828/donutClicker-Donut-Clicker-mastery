@@ -1,16 +1,19 @@
 const addOneElement = document.querySelector('.addButton')
+const
 const donut = new Donut();
 
 let isClickActive = false;
 let intervalId = null;
+
 const donutMaker = function () {
-    //addDonutbutton
+    setupAddDonutsButton();
     //changeMultbutton
 }
 
 const updateClicks = function () {
     
 }
+
 const addDonutOnClick = function () {
     if (donut.isAdding() && !isClickActive) {
         totalActive();
@@ -21,6 +24,7 @@ const addDonutOnClick = function () {
         isClickActive = false;
     }
 }
+
 const clickerActive = function () {
     console.log('set interval is active')
     intervalId = setInterval(function () {
@@ -29,17 +33,12 @@ const clickerActive = function () {
         isClickActive = true;
     }, 1000)
 }
+
 const setupAddDonutsButton = function () {
     addOneElement.addEventListener('click', function () {
-        donut.
-    })
-}
-const setupAcceleratorButton = function () {
-    acceleratorElement.addEventListener('click', function () {
-        car.accelerate();
-        console.log(car.getSpeed());
-        updateSpeedometer();
-        warnIfSpeeding();
-        addMilesIfDriving();
+        donut.addOne();
+        console.log(donut.getTotalDonuts());
+        updateClicks();
+        addDonutOnClick();
     })
 }
