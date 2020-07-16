@@ -4,10 +4,6 @@ class Donut {
         this.total = 0;
     }
 
-    getClick() {
-        return this.click;
-    }
-
     getTotalDonuts() {
         return this.total;
     }
@@ -16,26 +12,9 @@ class Donut {
         this.total += 1;
     }
 
-    isAdding() {
-        return this.count > 0;
-    }
 
-    addMultiplier() {
-        this.count += 10;
-    }
 
-    isMultiplying() {
-        return this.count > 50;
-    }
-
-    changeMultiplier() {
-        this.count += 100;
-        if (this.count > 150) {
-            this.count = 0;
-        }
-    }
-}
-//    Add one to Count
+    //    Add one to Count
     // First AutoClicker with 100 count
     // AutoClicker price increases
     // Ensure you can buy AutoClickers
@@ -62,4 +41,4 @@ class Donut {
     // Price of bonus buttons displayed
 
     // Resest the game counts
-
+}
