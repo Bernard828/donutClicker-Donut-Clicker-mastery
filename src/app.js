@@ -1,27 +1,26 @@
-const addOneElement = document.querySelector('.addButton')
+const total = document.querySelector('.total')
 
 const donut = new Donut();
 
 let isClickActive = false;
 let intervalId = null;
 
+
 const donutMaker = function () {
-    setupAddDonutsButton();
-    //changeMultbutton
+    TotalCount();
+    //     setupAddDonutsButton();
+    //     setupAutoClicker();
+    //     setupDonutMultipier();
 }
 
-const updateClicks = function () {
-addOneElement
-
+const TotalCount = function () {
+    total.innerHTML = donut.getTotalDonuts();    
 }
 
-
-const setupAddDonutsButton = function () {
-    addOneElement.addEventListener('click', function () {
+const setupAddOneClickButton = function () {
+    totalElement.addEventListener('click', function () {
         donut.addOne();
-        console.log(donut.getTotalDonuts());
-        //updateClicks();
-        addDonutOnClick();
     })
 }
 
+donutMaker();

@@ -1,15 +1,15 @@
 class Donut {
     constructor() {
-        this.click = 0;
-        this.total = 0;
+        //this.value = 0;
+        this.donuts = 0;
     }
 
     getTotalDonuts() {
-        return this.total;
+        return this.donuts;
     }
 
     addOne() {
-        this.total += 1;
+        this.donuts += 1;
     }
 
 
