@@ -9,7 +9,7 @@ const donut = new Donut();
 const donutMaker = function () {
     TotalCount();
     AddOneClickButton();
-    AutoClick();
+    AutoClickUpdate();
     buyAutoClickButton();
 }
 
@@ -18,8 +18,8 @@ const TotalCount = function () {
     total.innerHTML = donut.getTotalDonuts();
 }
 
-const AutoClick = function () {
-    autoClick.innerHTML = donut.getAutoClicker();
+const AutoClickUpdate = function () {
+    autoClick.innerHTML = donut.getAutoClickerCount();
 }
 
 
@@ -34,8 +34,8 @@ const AddOneClickButton = function () {
 const buyAutoClickButton = function () {
     autoClickButton.addEventListener('click', function () {
         console.log('buy button clicked')
-        donut.autoClicker();
-        AutoClick();
+        donut.addAutoClicker();
+        AutoClickUpdate();
     })
 }
 

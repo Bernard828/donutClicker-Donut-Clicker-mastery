@@ -2,7 +2,8 @@ class Donut {
 
     constructor() {
         this.donuts = 0;
-        this.autoClicker = 0;
+        this.autoClickerCount = 0;
+        this.autoClickerCost = 0;
     }
 
     getTotalDonuts() {
@@ -13,12 +14,18 @@ class Donut {
         this.donuts += 1;
     }
 
-    getAutoClicker() {
-        return this.autoClicker;
+    getAutoClickerCount() {
+        return this.autoClickerCount;
     }
 
-    autoClicker() {
-        this.autoClicker += 1;
+    getAutoClickerCost() {
+        return this.autoClickerCost;
+    }
+
+
+    addAutoClicker() {
+
+        this.autoClickerCount += 1;
 
     }
 
