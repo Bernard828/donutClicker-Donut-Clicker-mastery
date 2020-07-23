@@ -1,7 +1,8 @@
 class Donut {
+
     constructor() {
-        //this.value = 0;
         this.donuts = 0;
+        this.autoClicker = 0;
     }
 
     getTotalDonuts() {
@@ -12,10 +13,21 @@ class Donut {
         this.donuts += 1;
     }
 
+    getAutoClicker() {
+        return this.autoClicker;
+    }
+
+    autoClicker() {
+        this.autoClicker += 1;
+
+    }
 
 
 
-    // Add one to Count
+
+
+
+
     // First AutoClicker with 100 count
     // AutoClicker price increases
     // Ensure you can buy AutoClickers
@@ -29,8 +41,7 @@ class Donut {
     // Multiplier is sent to AutoClicker
 
 
-    // Create Click button
-    // Create Click count element
+
     // section for AutoClicks
     // Section for Multiplier
     // Header with dropdown: Co. info, game inspiration, about Developer
