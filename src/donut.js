@@ -14,7 +14,8 @@ class Donut {
 
 
 
-    //    Add one to Count
+
+    // Add one to Count
     // First AutoClicker with 100 count
     // AutoClicker price increases
     // Ensure you can buy AutoClickers
